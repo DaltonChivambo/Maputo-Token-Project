@@ -25,7 +25,7 @@ contract MaputoToken {
     }
 
     modifier onlyOwner{
-        require(msg.sender == owner); //only owner changeOwner
+        require(msg.sender == owner);
         _;
     }
 
