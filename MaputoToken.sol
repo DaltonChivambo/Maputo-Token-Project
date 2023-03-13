@@ -10,12 +10,11 @@ contract MaputoToken {
 
     mapping(address => uint256) public balances;
     mapping(address => bool) public minted;
+    mapping(address => mapping(address => uint)) public allowance;
 
     address public owner;
     address public philanthropicAddress;
     uint public philanthropicFee = 1; // (1/10000) 0.01%
-    
-    mapping(address => mapping(address => uint)) public allowance;
     
     event Transfer(address indexed _from, address indexed _to, uint256 _amount); 
     event Approval(address indexed _owner, address indexed _spender, uint256 _amount);
